@@ -16,23 +16,29 @@ Go through all of the following questions and think about how you would respond 
   by offering visually appealing, effective solutions to daily problems or inconveniences.
 
 * What is a recent technical challenge you experienced and how did you solve it?
+*   
 
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+*   My primary concern is to build apps with the end user in mind. I believe that all of these disciplines touches the user's experience, albeit in different ways. Security is a primary concern, particularly if apps involve collecting sensitive data. I use technologies such as Bcrypt or Facebook OAuth to handle the hashing of user passwords so that they're never stored in plain text.
+*   UI is important, because even the fastest, most efficient application is worthless if user's don't understand how to use it. Therefore I aim for clean, simple designs with clear, concise instructions if needed, and obvious, easy to spot navigation.
+*   For performance, technology and maintainability, I take into consideration the size of the application that I am bulding to pick the best tool for the job. I try to keep my code effecient and DRY. Additionally, I comment my code so that another dev can quickly spot code that handles different functionality. I also adhere to standards in naming conventions of files and folders so that my app remains organized. 
 
 * Talk about your preferred development environment.
-  I prefer to work in on Apple systems in OS X. For code writing, I prefer to use Sublime Text. As for programming languages, I feel most comfortable working with Javascript and jQuery.
+  I prefer to work in on Apple systems in OS X. My preferred text editor is Sublime Text. As for programming languages, I feel most comfortable working in Javascript or a library such as jQuery. As for full-stack web applications, I find the MEAN stack equal parts challenging and rewarding.
 
 * Which version control systems are you familiar with?
   I am proficient working with Git and Github. I have used both these local and remote tools for version control in both individual and collaborative projects.
 
 * Can you describe your workflow when you create a web page?
-  I first define the purpose of the web page or the problem that I am attempting to solve. I then develop user stories that help guide the outline of the core functionality of the site. From there, I wireframe how the site will visually look. After those steps, I decide which technologies I will need to accomplish the completion of the project (i.e. Is this a front-end application or full-stack? Is there an API avilable that could be helpful to populate data for site)
+  I first define the purpose of the web page or the problem that I am attempting to solve. I then develop user stories that help guide the outline of the core functionality of the site. From there, I wireframe how the site will visually look. After those steps, I decide which technologies I will need to accomplish the completion of the project (i.e. Is this a front-end application or full-stack? Is there an API avilable that could be helpful to populate data for site). I then go about building the "bare bones" of the site. This coudld be as simple as a three file front-end single page website or a fullstack application. From there I go about implementing the wireframed design, seek feedback on usability and adjust as needed.
 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+*   I would combine the stylesheets into one file and uses comments to seperate the different style sheets. 
 
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
+*   Both are approaches to building a website. Progressive enhancement starts with building functionality first for older web browsers and adding functionality that will automatically be enabled by modern browsers. Graceful degradation is a process by which the website is developed with modern browser features in mind, but it also "degrades gracefully" to older browsers so that maximum functionality is maintained. Both approaches should ultimately get to the same result for the end user.
 
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
@@ -40,7 +46,7 @@ Go through all of the following questions and think about how you would respond 
 
 
 * If you could master one technology this year, what would it be?
-  Ruby
+  ReactJS
 
 * Explain the importance of standards and standards bodies.
   Standards and the bodies that create them, are imprortant to the advancement of the web development. Without standards, it would be difficult to develop applications that were supported by all commonly used web browsers. Standards ensure that code will work for the user, regardless of OS or browser selection.
@@ -49,10 +55,15 @@ Go through all of the following questions and think about how you would respond 
 ## HTML Questions
 
 * What does a `doctype` do?
+*   It instructs the web browser about which version the markup language is written in.
 * What's the difference between HTML and XHTML?
+*   XHTML is essentially vanilla HTML expressed as XML. XHTML is a stricter version of HTML and helps developers from writing "bad" html that does not correctly render on a user's device.
 * What are `data-` attributes good for?
+*   Data attributes are good for creating a class of attributes for a particular element in the DOM. These attributes can then be defined and manipulted using scripts.
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+* Cookies are stored on the client's computer and persist (unless deleted by the user). They are often used as a means to help speed up authentication for user's on return visits to sites. Local storage is stored on the client side, but only persists while the user's window is open. Session storage is similar to local storage only the storage is handled on the server side.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+*   As the browser renders elements sequentially as the page loads, it is best practice to place the link references in the head so that they inform the browser to load the correct styling as the page loads. If you have custom style sheets, they should be listed after any framework stylesheets such as Bootstrap. Scripts should be loaded just before the closing body tag so as not to interupt the page from loading it's content while attempting to download and execute a script.
 
 ## CSS Questions
 
@@ -60,12 +71,19 @@ Go through all of the following questions and think about how you would respond 
   IDs are unique to one element and are defined in css with the # symbol. Classes apply to any elements to which they are assigned and are prefixed with a "." in css files.
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+*   Resetting CSS simply involves removing all default styling of all elements on the page. Normalizing aims to make the standard elements (i.e. h1-h6, p, strong) appear the same accross all browsers. I would chose normalize as it would require only minor tweeks to the stylesheet to modify elements. It would also ensure that the page would look good across different browers.
 * Describe Floats and how they work.
+*   The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
 * Describe z-index and how stacking context is formed.
+* The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. z-index only effects elements that have a position value other than static (the default).
 * Have you ever used a grid system, and if so, what do you prefer?
+* I have used both Materialize and Bootstrap. I love Bootstrap for it's cleanliness and simplicity.
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+*   Yes I implement media queries routinely in my projects to aid in making my pages more responsive. My Seattle Showdown app removes overlayed title text when the the window size is at or below 700px. This prevents the absolutely positined text from running over it's intended space.
 * How do you optimize your webpages for print?
+*   Using simple color combinations with good contrast.
 * What are the advantages/disadvantages of using CSS preprocessors?
+*   
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
